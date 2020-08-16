@@ -21,6 +21,7 @@ html {
     --rectangle-color: #AFB1B8;
     --background-client: #E5E5E5;
     --background-color-icon-footer: rgba(255, 255, 255, 0.1);
+    --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     }
 
 body {
@@ -110,6 +111,14 @@ body {
     letter-spacing: 0.02em;
     color: var(--secondary-text-color);
     text-decoration: none;
+
+    /* transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
+    
+    transition: color 250ms var(--timing-function); 
+    
+
 }
 
 
@@ -124,11 +133,14 @@ body {
     background-color: var(--accent-color);
     border-radius: 2px;
     opacity: 0;
+    transition: opacity 250ms var(--timing-function); 
+    
 }
 
 .site-nav-link:hover::after {
     width: 100%;
     opacity: 1;
+    rotate: (0.5turn);
 }
 
 .site-nav li:not(:last-child) {
@@ -138,10 +150,10 @@ body {
 .site-nav-link:hover,
 .site-nav-link:focus {
   
-    font-weight: 500;
+    /* font-weight: 500;
     font-size: 14px;
     line-height: 16px;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.02em; */
     color: var(--accent-color);
 }
 
@@ -172,6 +184,7 @@ body {
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--primary-text-color);
+    transition: color 250ms var(--timing-function), fill 250ms var(--timing-function);
 }
 
 .contacts-mail {
@@ -179,6 +192,7 @@ body {
 }
 
 .contacts-icon {
+   
     margin-right: 10px;  
 }
 
@@ -482,6 +496,7 @@ margin-bottom: 0;
     background-color: var(--background-color);
     /* border: 1px solid green; */
     fill: var(--rectangle-color);
+    transition: background-color 250ms var(--timing-function), fill 250ms var(--timing-function);
 }
 
 .social-icon-link:not(:last-child) {
@@ -564,6 +579,7 @@ margin-bottom: 0;
     height: 90px;
     border: 1px solid var(--rectangle-color);
     border-radius: 4px;
+    transition: fill 250ms var(--timing-function), border-color 250ms var(--timing-function);
 
 }
 
@@ -662,6 +678,7 @@ margin-bottom: 0;
     background-color: var(--background-color-icon-footer);
     /* border: 1px solid green; */
     fill: var(--background-color);
+    transition: background-color 250ms var(--timing-function);
 }
 
 .network-links-image:hover,
@@ -695,6 +712,7 @@ margin-bottom: 0;
     border-radius: 4px;
     width: 200px;
     cursor: pointer;
+    transition: background-color 250ms var(--timing-function);
  }
 
  .subscribe-button::after  {
@@ -706,6 +724,7 @@ margin-bottom: 0;
      background-image: url(../image/svg-icons/icon-telegram.svg);
      background-size: contain;
      /* background-color: #fff; */
+     
     }
 
 .subscribe-button:hover {
@@ -741,6 +760,7 @@ margin-bottom: 0;
     border-radius: 4px;
     border-color: transparent;
     padding: 6px 22px;
+    transition: background-color 250ms var(--timing-function), color 250ms var(--timing-function);
 }
 
 .filter-button button:hover,
