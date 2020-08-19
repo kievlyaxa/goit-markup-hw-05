@@ -499,6 +499,7 @@ margin-bottom: 0;
 
 .social-icon {
     fill: var(--rectangle-color);
+    transition: fill 250ms var(--timing-function);
 }
 
 .social-icon-link {
@@ -511,7 +512,12 @@ margin-bottom: 0;
     background-color: var(--background-color);
     /* border: 1px solid green; */
     fill: var(--rectangle-color);
-    transition: background-color 250ms var(--timing-function), fill 2000ms var(--timing-function) ;
+    transition: background-color 250ms var(--timing-function);
+}
+
+.social-icon-link:hover .social-icon,
+.social-icon-link:focus .social-icon {
+    fill: var(--background-color);
 }
 
 .social-icon-link:not(:last-child) {
@@ -522,11 +528,6 @@ margin-bottom: 0;
 .social-icon-link:focus {
     background-color: var(--accent-color);
     
-}
-
-.social-icon-link:hover .social-icon,
-.social-icon-link:focus .social-icon {
-    fill: var(--background-color);
 }
 
 .team-list>li img {
